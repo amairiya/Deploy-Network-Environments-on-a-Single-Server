@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello World with Buttons</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .custom-button {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 text-center">
+        <h1 class="mb-4">Hello, World!</h1>
+        <p>This is a simple front-end example with Bootstrap styling.</p>
+        
+        <div>
+            <button class="btn btn-primary custom-button" onclick="showAlert()">Show Alert</button>
+            <button class="btn btn-secondary custom-button" onclick="changeText()">Change Text</button>
+            <button class="btn btn-success custom-button" onclick="toggleVisibility()">Toggle Visibility</button>
+        </div>
+
+        <div id="message" class="mt-4">
+            <p id="text-to-change">This text will be changed by the button.</p>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function showAlert() {
+            alert('Button clicked!');
+        }
+
+        function changeText() {
+            document.getElementById('text-to-change').innerText = 'The text has been changed!';
+        }
+
+        function toggleVisibility() {
+            const messageDiv = document.getElementById('message');
+            if (messageDiv.style.display === 'none') {
+                messageDiv.style.display = 'block';
+            } else {
+                messageDiv.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
